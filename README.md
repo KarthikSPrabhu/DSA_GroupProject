@@ -22,7 +22,20 @@ It reads data from a text file (`database.txt`) and provides information about h
 - Reads hospital and area data from a text file  
 - Displays hospital details, areas, and distance matrices  
 - Calculates optimized distances between hospitals and areas  
-- Modular C design using header and source files  
+- Modular C design using header and source files
+
+| Data Structure        | Type                    | Used In                 | Purpose                           |
+| --------------------- | ----------------------- | ----------------------- | --------------------------------- |
+| `BedNode`             | Linked List             | Hospital bed management | Manage beds dynamically           |
+| `Hospital`            | Struct                  | CityNetwork             | Store hospital details & bed list |
+| `Area`                | Struct                  | CityNetwork             | Store city area info              |
+| `CityNetwork`         | Struct + Graph (Matrix) | Core data model         | Connect areas ↔ hospitals         |
+| `Patient`             | Struct                  | Queue system            | Store patient details             |
+| `PatientPQ`           | Priority Queue (Heap)   | Accident management     | Process patients by severity      |
+| `int **adj`           | 2D Array (Graph)        | Dijkstra Algorithm      | Compute shortest routes           |
+| `Hospital *hospitals` | Dynamic Array           | CityNetwork             | Maintain multiple hospitals       |
+| `Area *areas`         | Dynamic Array           | CityNetwork             | Maintain multiple areas           |
+
 
 ---
 
